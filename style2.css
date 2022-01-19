@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700|Rubik:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{  
+    font-family: Rubik,font-awesome
+}
+
+section{
+    height: calc(100vh - 80px);
+    color: #1a1a1a;
+    background-color: #eeeeee;
+}
+
+#banner {
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    text-align: center;
+    min-height: calc(100vh - 80px);
+}
+
+.superpuesto{
+    margin-left: 80px;
+    background: url(/assets/imagenes/shadesmar.png), #1a1a1a99;
+    background-size: cover;
+    width: calc(100vw - 160px);
+    overflow: hidden;
+    height: calc(100% - 80px);
+    color: #eeeeee;
+}
+
+#banner .content{
+    display: inline-block;
+    margin-right: 1%;
+    max-width: 95%;
+    padding: 6em;
+    position: relative;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#banner .content header{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#banner .content header h2{
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#banner .content header p{
+    margin: 0.5em 0 0 0;
+    font-size: 1em;
+    top: 0;
+}
+
+#banner .content .portrait{
+    border-radius: 100%;
+    display: inline-block;
+    height: 18em;
+    margin-left: 5em;
+    vertical-align: middle;
+    width: 18em;
+}
+
+#banner .content .portrait img {
+    border-radius: 100%;
+    display: block;
+    width: 100%;
+}
+
+/* For smaller screen */
+
+@media screen and (max-width: 1300px) {
+    #banner .content { 
+        padding: 9em 0;
+        text-align: center;
+    }
+
+    #banner .content header{
+        display: block;
+        margin: 0 0 2em 0;
+    }
+
+    #banner .content .portrait{
+        margin: 0;
+    }
+}
+
+
+nav{
+    /* background: #1a1a1a; */
+    background: #eeeeee;
+    height: 80px;
+    width: 100%;
+    z-index: 21;
+    transition: all .3s;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+    padding: 20vh;
+}
+
+nav ul li{
+    display: block;
+    line-height: 60px;
+    margin: 0 5px;
+}
+ nav ul li a{
+     color: #777777;
+     font-size: 30px;
+ }
+
+ a:hover{
+     color: #777777;
+     transition: .5s;
+ }
+
+ .checkbtn{
+     display: block;
+     float: right;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80px;
+     height: 80px;
+     background: #eeeeee;
+     border: 0px;
+     cursor: pointer;
+    transition: all .3s;
+ }
+ 
+ .checkbtn.active,.menu-btn__burger:hover{
+     background: #003153;
+ }
+
+ .menu-btn__burger{
+     width: 50px;
+     height: 15px;
+     background: #1a1a1a;
+     border-radius: 5px;
+     transition: all .5s ease-in-out;
+ }
+
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #1a1a1a;
+    top: -100%;
+    left: 0;
+    text-align: center;
+    transition: all .5s;
+    z-index: 21;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ nav ul{
+    top: 80px
+}
+
+#check:checked ~ nav .menu-btn__burger{
+    background: #777777;
+}
+
+#check:checked ~ nav .checkbtn{
+    background: #1a1a1a;
+}
+
+#check:checked ~ nav{
+    background: #1a1a1a;
+}
