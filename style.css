@@ -122,9 +122,18 @@ nav ul li{
      font-size: 30px;
  }
 
+nav ul .footer-container{
+    display: inline-block;
+    float: center;
+    color: #777777;
+    font-size: 30px;
+    padding: 10em;
+}
+
  a:hover{
-     color: #777777;
+     color: #eeeeee;
      transition: .5s;
+     font-size: 35px;
  }
 
  .checkbtn{
