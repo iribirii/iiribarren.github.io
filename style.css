@@ -27,21 +27,24 @@ section{
     min-height: calc(100vh - 80px);
 }
 
+
 .superpuesto{
-    margin-left: 80px;
-    background: url(/assets/imagenes/shadesmar.png), #1a1a1a99;
+    margin: auto;
+    background: url(/assets/imagenes/front_cover.png), #1a1a1a99;
     background-size: cover;
+    background-position: center;
     width: calc(100vw - 160px);
     overflow: hidden;
     height: calc(100% - 80px);
     color: #eeeeee;
+    box-shadow: inset 0 0 0 1000px #1a1a1a20;
 }
 
 #banner .content{
     display: inline-block;
     margin-right: 1%;
     max-width: 95%;
-    padding: 6em;
+    padding: 3em;
     position: relative;
     text-align: right;
     vertical-align: middle;
@@ -53,7 +56,7 @@ section{
 }
 
 #banner .content header h2{
-    font-size: 2.5em;
+    font-size: 3.5em;
     margin: 0;
 }
 
@@ -132,7 +135,7 @@ nav ul .footer-container{
     right: 1em;
 }
 
- a:hover{
+nav a:hover{
      color: #eeeeee;
      transition: .5s;
      font-size: 35px;
@@ -248,7 +251,7 @@ ul{
 }
 
 .about_me_portrait{
-    background-image: url(/assets/imagenes/portrait.jpg);
+    background-image: url(/assets/imagenes/about_me/profile_picture.jpg);
     background-size: cover;
     height: calc(100vh - 80px);
     width: calc(100vh - 80px);
@@ -256,25 +259,43 @@ ul{
 }
 
 .about_me_description{
-    position: relative;
+    display: absolute;
+    justify-content: center;
+    align-items: center;
     background-color: #eeeeee;
     height: calc(100vh - 80px);
     width: calc(100vw - 100vh + 80px);
     color: #1a1a1a;
+    overflow: hidden;
+}
+
+.about_me_description:hover{
+    overflow: auto;
+}
+
+.about_me_description::-webkit-scrollbar{
+    display:none
+}
+
+.publications_list::-webkit-scrollbar{
+    display:none
 }
 
 .about_me_description div{
-    float: right;
-    margin: 20vh  10vw 0 0;
-    text-align: right;
+    position: flex;
+    padding: 2vw 5vw 4vw;
+    justify-content: center;
+    text-align: justify;
 }
 
 .about_me_description h2{
     font-size: 2em;
+    color: #1a1a1a;
 }
 
 .about_me_description p{
     font-size: 1.3em;
+    color: #1a1a1a;
 }
 
 .home{
@@ -283,4 +304,129 @@ ul{
 
 .home:hover{
     font-size: 55px;
+}
+
+.link-tfm{
+    color: #003153;
+}
+.link-tfm:hover{
+    color: #0071c2;
+}
+
+.link-publications{
+    color: #0071c2;
+}
+.link-publications:hover{
+    color: #003153;
+}
+
+.link-trg{
+    color: #1a1a1a;
+}
+.link-trg:hover{
+    color: #0071c2;
+}
+
+/* Publications */
+.publications_section{
+    display: inline;
+}
+
+/* .publications_section div{
+    display: inline;
+} */
+
+
+.publications_section{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background-color: #eeeeee;
+    display: flex;
+}
+
+
+ .publications_checkbtn{
+     display: block;
+     float: right;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80px;
+     height: 80px;
+     background: #1a1a1a;
+     border: 0px;
+     cursor: pointer;
+    transition: all .3s;
+ }
+ 
+ .checkbtn.active,.menu-btn__burger:hover{
+     background: #777777;
+ }
+
+ .publications_menu-btn__burger{
+     width: 50px;
+     height: 15px;
+     background: #eeeeee;
+     border-radius: 5px;
+     transition: all .5s ease-in-out;
+ }
+
+.publications_nav{
+    /* background: #1a1a1a; */
+    background: #1a1a1a;
+    height: 80px;
+    width: 100%;
+    z-index: 21;
+    transition: all .3s;
+}
+
+.publications_bg{
+    background-image: url(/assets/imagenes/publications/portada_eds.png);
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    height: calc(100vh - 80px);
+    width: calc(100vh - 80px);
+    color: #1a1a1a;
+}
+
+.publications_list{
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    width: calc(100vw - 100vh + 80px);
+    color: #1a1a1a;
+    overflow: hidden;
+}
+
+.publications_list:hover{
+    overflow: auto;
+}
+
+.publications_list div{
+    position: flex;
+    padding: 2vw 5vw 4vw;
+    justify-content: center;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.publications_list h2{
+    font-size: 2em;
+    color: #1a1a1a;
+}
+
+.publications_list h3{
+    font-size: 1.5em;
+    color: #1a1a1a;
+}
+
+.publications_list p{
+    line-height: 1.5;
+    font-size: 1.2em;
+    color: #1a1a1a;
 }
