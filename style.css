@@ -141,6 +141,10 @@ nav a:hover{
      font-size: 35px;
  }
 
+.nohover{
+    color: #0071c2;
+}
+
  nav ul div a {
   color: #777777;
 }
@@ -300,6 +304,11 @@ ul{
 
 .home{
     font-size: 45px;
+}
+
+.home_blue{
+    font-size: 45px;
+    color: #0071c2;
 }
 
 .home:hover{
